@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-  ~ This file was last modified at 2022.01.24 19:51 by Victor N. Skurikhin.
+  ~ This file was last modified at 2022.01.24 22:44 by Victor N. Skurikhin.
   ~ This is free and unencumbered software released into the public domain.
   ~ For more information, please refer to <http://unlicense.org>
   ~ pom.xml
@@ -88,12 +88,12 @@
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>exec-maven-plugin</artifactId>
                     <configuration>
-                        <executable>/usr/local/Cellar/openjdk@11/11.0.9/bin/java</executable>
+                        <executable>java</executable>
                         <arguments>
                             <argument>-Xms512m</argument>
                             <argument>-Xmx512m</argument>
                             <argument>-XX:NewRatio=3</argument>
-                            <argument>-XX:+UseConcMarkSweepGC</argument>
+                            <!-- before java 17 argument>-XX:+UseConcMarkSweepGC</argument -->
                             <argument>-Xlog:gc*,gc+phases=debug:file=gc.log:time,pid,tags:filecount=10,filesize=20m</argument>
                             <argument>-classpath</argument>
                             <classpath/>
