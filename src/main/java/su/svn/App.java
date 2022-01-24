@@ -1,4 +1,4 @@
-package $su.svn;
+package su.svn;
 
 /**
  * Hello world!
